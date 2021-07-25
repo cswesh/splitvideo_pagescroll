@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Split video on Page Scroll</title>
+</head>
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="video.mov" type="video/mp4" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="video.mov" type="video/mp4" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="content">
+        <h2>Split video on page scroll</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque impedit labore est, hic nisi officia cupiditate dignissimos. Eveniet at consequuntur omnis animi, temporibus corporis fuga reiciendis aut consequatur. Impedit ipsam nam consequatur possimus necessitatibus blanditiis nemo est. Veritatis rem expedita saepe hic similique, corrupti beatae quidem incidunt eaque perspiciatis excepturi aut provident exercitationem! Accusantium repudiandae saepe, sunt maxime sit mollitia dolorem debitis maiores officiis natus commodi omnis, nostrum aliquid ipsum dolore eius accusamus! Voluptatem quae ut repudiandae deleniti quibusdam, repellendus delectus cumque odio explicabo? At labore deserunt doloremque minima quia, ipsam illum animi repellendus numquam, voluptas, quisquam possimus aliquid.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod animi, in laboriosam tempore amet esse debitis. Odit molestiae dolor voluptate perferendis, a voluptates eveniet magni expedita aspernatur ab maiores veniam ipsum eius quis dolorum repudiandae libero dolorem est amet animi inventore. Laboriosam, earum. Inventore eaque, fugit sint fuga itaque quod sunt pariatur eligendi magni quam necessitatibus sequi ex animi ullam iure minima repellendus quisquam aut. Nesciunt architecto commodi repellendus voluptatem labore incidunt in consequuntur natus cumque eaque voluptas non aut aspernatur iure beatae laboriosam deleniti molestiae, dolore fugiat rem reprehenderit, temporibus sint. Repellat quis non officiis molestiae libero consequatur ullam.</p>
+    </div>
+
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll',function(){
+            side1.style.left = -window.pageYOffset+'px';
+            side2.style.left = window.pageYOffset+'px';
+        })
+    </script>
+</body>
+</html>
